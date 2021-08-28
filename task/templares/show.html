@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+  <div class="container col-md-8 mt-5">
+      <h2 class="text-center bg-info"> Details </h2>
+      <table class="table table-hover">
+          <thead class="bg-info text-center text-white">
+              <th> id</th>
+              <th>Student Name</th>
+              <th>Student Roll</th>
+              <th>Student Branch</th>
+              <th>Student Email</th>
+              <th>Student Mobile</th>
+              <th>Operations</th>
+          </thead>
+          <tbody>
+              {% for i in data%}
+              <tr>
+                  <td>{{i.id}}</td>
+                  <td>{{i.sname}}</td>
+                  <td>{{i.sroll}}</td>
+                  <td>{{i.sbranch}}</td>
+                  <td>{{i.semail}}</td>
+                  <td>{{i.smobail}}</td>
+                  <td><a href="{% url 'update' i.id %}">Update</a></td>
+                  <td><a href="{% url 'delete' i.id %}">Delete</a></td>
+                  
+              </tr>
+
+              {% endfor %}
+          </tbody>
+      </table>
+  </div>
+</body>
+</html>
+

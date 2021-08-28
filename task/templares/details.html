@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Form App</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'details' %}">Details</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<form action="/action_page.php">
+  <div class="container mt-5">
+    <h1 class="alert alert-primary text-center">Student Details</h1>
+    <p href="{% url 'register' %}" class="btn btn-primary btn-md float-md-right">Register</p> 
+    <table class="table table-hover">
+      <thead class="bg-info text-center text-white">
+          <th> id</th>
+          <th>Student Name</th>
+          <th>Student Mobile</th>
+          <th>Student Age</th>
+          <th>Student Gender</th>
+          <th>Student Branch</th>
+          <th colspan="2">Operations</th>
+      </thead>
+      <tbody>
+          {% for i in data%}
+          <tr>
+              <td>{{i.id}}</td>
+              <td>{{i.names}}</td>
+              <td>{{i.mobile_no}}</td>
+              <td>{{i.age}}</td>
+              <td>{{i.gender}}</td>
+              <td>{{i.branch}}</td>
+              <td><a href="{% url 'replace' i.id %}"class="btn btn-outline-success">Update</a></td>
+              <td><a href="{% url 'dell' i.id %}"class="btn btn-outline-success">Delete</a></td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</div>
+</body>
+</html>
+
