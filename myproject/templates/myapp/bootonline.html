@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootonline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+    crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card col-md-6 mx-auto md-3 shodow-lg border-sucess">
+            <div class="card-header">
+                <h3 class="bg-dark text-white text-center p-2 border rounded">
+                Registration</h3>
+                <form>
+                    <input type="text" name="uname" placeholder="Enter Username"
+                     class="form-control my-2">
+                    <input type="email" name="email" placeholder="Enter Email Adress"
+                     class="form-control my-2">
+                    <input type="number" name="mobail" placeholder="Enter User Mobil Number"
+                    class="form-control my-2">
+                    <input type="password" name="psw" placeholder="Enter Password"
+                    class="form-control my-2">
+                    <input type="password" name="cpsw" placeholder="Enter Confirm Password"
+                    class="form-control my-2">
+                    <label class="radio">Gender :
+                        <input type="radio" name="optradio" value="male"> Male
+
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="optradio" value="female"> Female
+
+                    </label>
+                    <input type="date" name="dob" value="dob" class="form-control my-2">
+                    <label class="checkbox-inline mb-2">
+                        <input type="checkbox" name="lan" value="telugu"> Telugu
+                    </label>
+                    <label class="checkbox-inline mb-2">
+                        <input type="checkbox" name="lan" value="hindi"> Hindi
+                    </label>
+                    <label class="checkbox-inline mb-2">
+                        <input type="checkbox" name="lan" value="english"> English
+                    </label>
+                    <div>
+                        <label for="upload"><b>File Upload :</b></label></label>
+                        <input type="file" name="file" value="no file nochosen"
+                        class="form-control-file border mt-2">
+                    </div>
+                    <input type="submit" name="Register" class="form-control my-2
+                    btn btn-primary">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
